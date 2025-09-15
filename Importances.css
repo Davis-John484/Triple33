@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 30px;
+    margin-top: 50px;
+    font-family: sans-serif;
+    background-color: rgb(189, 185, 186);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainheader{
+    top: 0;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    background-color: rgb(136, 131, 131);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 15px 10px rgba(56, 55, 55, 0.5);
+    z-index: 100;
+}
+.logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+    text-decoration: none;
+    color: #19f511;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.main-nav{
+    display: flex;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-item{
+    margin-left: 1rem;
+}
+.nav-link{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5em 1rem;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    
+}
+.nav-link:hover{
+    background-color: rgb(47, 199, 47);
+    border-color: rgb(0, 0, 0);
+
+}
+.nav-toggle{
+    display: none;/*Hidden on desktop*/
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 2px;
+}
+.bar,.bar::before,.bar::before{
+    display: block;
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    margin-bottom: 3px;
+}
+.bar::before{
+    content: visible;
+    position: absolute;
+    top: 8px;
+}
+/*Mobile Styles*/
+@media(max-width:768px){
+    .nav-toggle{
+        display: block;
+    }
+    .main-nav{
+        display: none;
+        position: absolute;
+        top: 12%;
+        left: 30%;
+        right: 0;
+        width: 50%;
+        background: 20px rgb(119, 118, 118);
+        transition: transform 0.3s ease-in-out;
+        transition: translatey(-100%);
+        z-index: 100;
+    }
+    .main-nav.visible{
+        display: inline-block;
+        transform: translateY(0);
+    }
+    .nav-list{
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav-item{
+        margin: 0;
+        border-top: 1px solid #444;
+    }
+    .nav-link{
+        padding: 1em;
+    }
+    .nav-toggle[aria-expand="true"].bar{
+        transform: rotate(45deg);
+    }
+    .nav-toggle[aria-expand="true"].bar::before{
+        opacity: 0;
+    }
+    .nav-toggle[aria-expand="true"].bar::after{
+        transform: rotate(-90deg) translate(8px);
+    }
+    .ImageSection{
+        display: inline-block;
+    }
+    .Image1{
+        max-width: 100%;
+    }
+
+    .Image2{
+        max-width: 100%;
+    }
+    .Image3{
+        max-width: 100%;
+    }
+    .Image4{
+        max-width: 100%;
+    }
+
+}
+.header1{
+    justify-content: center;
+}
+.WordSection1{
+    display: block;
+    padding-left: 2rem;
+    padding-right: 1.2rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+}
+h2{
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+p{
+    font-size: 18px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+.BodySection{
+    display: inline-block;
+}
+.ImageSection{
+    padding-top: 1rem;
+    display: inline-block;
+    max-width: 850px;
+}
+img{
+    position: center;
+    position: sticky;
+    border-radius: 20px;
+    border: 3px solid rgb(255, 255, 255);
+    margin: 7px;
+    max-width: 400px;
+}
+.Image-Title{
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 20px;
+    padding-left: 5px;
+}
+.Image1{
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.Image2{
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    background: transparent;
+    border-radius: 20px;
+}
+.Image3{
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    background: transparent;
+    border-radius: 20px;
+}
+.Image4{
+    padding-top: 2rem;
+    margin-bottom: 0.5rem;
+    background: transparent;
+    border-radius: 20px;
+}
